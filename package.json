@@ -1,0 +1,28 @@
+{
+  "name": "bars-cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "convertToPDF": "ts-node html-to-pdf-converter/converter.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsbarsukov/cv.git"
+  },
+  "author": "Barsukov Nikita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nsbarsukov/cv/issues"
+  },
+  "homepage": "https://github.com/nsbarsukov/cv#readme",
+  "devDependencies": {
+    "typescript": "3.9.2"
+  },
+  "dependencies": {
+    "@types/node": "14.0.19",
+    "less": "^3.11.3",
+    "puppeteer": "5.0.0",
+    "ts-node": "8.10.1"
+  }
+}
