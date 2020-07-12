@@ -19,20 +19,17 @@ async function converter(): Promise<void> {
 
     await page.goto('file://' + path.resolve(htmlFilePath), {waitUntil: 'networkidle0'});
 
-    // await new Promise(resolve => setTimeout(resolve, 1000));
-
     await page.pdf({
         displayHeaderFooter: false,
-        // format: 'A4',
-        preferCSSPageSize: true,
+        format: 'A4',
         margin: {
-            bottom: '0.2in',
-            left: '0.2in',
-            right: '0.2in',
-            top: '0.2in'
+            bottom: '0',
+            left: '0',
+            right: '0',
+            top: '0'
         },
         path: pdfFilePath,
-        scale: 0.9,
+        scale: 1,
         printBackground: true
     });
 
