@@ -6,18 +6,22 @@
 }
 
 .m-text() {
+    letter-spacing: .5px;
     font-size: @m-text-size;
 }
 
 .l-text() {
+    letter-spacing: 1px;
     font-size: @l-text-size;
 }
 
 .xl-text() {
     font-size: @xl-text-size;
+    letter-spacing: 3px;
 }
 
 .xll-text() {
+    letter-spacing: 4px;
     font-size: @xll-text-size;
 }
 
@@ -29,9 +33,51 @@
 }
 
 .circle-icon {
-    width: 20px;
-    height: 20px;
     border: 1px solid white;
     border-radius: 50%;
     padding: 5px;
+}
+
+.link {
+    color: @primary-dark-color;
+    text-decoration: none;
+    border-bottom: .3px solid @primary-dark-color;
+
+    &:visited {
+        color: initial;
+    }
+}
+
+.two-column-table(@first-column, @second-column) {
+    border-spacing: 0;
+
+    td {
+        padding: 10px 10px 10px 0;
+    }
+    tr:first-child td {
+        padding: 0 10px 10px 0;
+    }
+
+    tr td:first-child {
+        width: @first-column;
+        border-right: 1px solid @primary-dark-color;
+        border-bottom: 1px solid @primary-dark-color;
+    }
+
+    tr td:nth-child(2) {
+        @padding: 20px;
+
+        position: relative;
+        width: @second-column;
+        padding-left: @padding;
+
+        &:after {
+            content: '';
+            position:absolute;
+            bottom: 0;
+            right: 0;
+            left: @padding / 2;
+            border-bottom: 1px solid @primary-dark-color;
+        }
+    }
 }
