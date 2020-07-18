@@ -1,5 +1,12 @@
-# cv
+# Curriculum vitae
+Мое резюме в html формате.
 
-convertToPDF - переписанная на ts версия [этого репозитория](https://github.com/buu700/html-resume)
+## PDF converter
+В консоле нужно исполнить `npm i`,
+а после `npm run convertToPDF` и дальше следовать указаниям в консоле
+(или нажимать все enter, чтобы выбрать дефолтные настройки).
 
-[Идея резюме](https://www.templatemonster.com/ru/resumes/76948.html?aff=Rusability)
+convertToPDF
+
+## Планы на будущее
+- Добавить i18n через js-файл и возможность генерации pdf-файла в обоих форматах по выбору в консоле.
