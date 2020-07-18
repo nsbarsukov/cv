@@ -31,7 +31,11 @@ async function converter(): Promise<void> {
         },
         path: pdfFilePath,
         scale: 1,
-        printBackground: true
+        printBackground: true,
+        /**
+         * Paper ranges to print, e.g., '1-5, 8, 11-13'. Defaults to the empty string, which means print all pages.
+         */
+        pageRanges: '1'
     });
 
     await browser.close();
