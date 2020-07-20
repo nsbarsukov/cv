@@ -23,7 +23,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     width: 210mm;
-    height: 297mm;
+    height: 298mm;
     background-color: rgb(232, 232, 233);
     margin: 0 auto 0.5cm;
     box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
@@ -197,12 +197,14 @@ body {
         &__programming-languages {
             flex-grow: 1;
             margin-right: @sidebar-margin-right;
+            margin-top: 10px;
             margin-bottom: 0;
 
             .language {
                 display: flex;
                 align-items: center;
-                justify-content: flex-end;
+                justify-content: space-between;
+                margin-left: 20px;
                 padding-bottom: 10px;
 
                 &__name {
@@ -213,7 +215,6 @@ body {
                 &__icon {
                     width: 20px;
                     height: 20px;
-                    margin-left: 20px;
                 }
             }
         }
