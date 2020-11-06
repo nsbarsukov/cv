@@ -1,6 +1,7 @@
 # Curriculum vitae
 Мое резюме в html формате. Это `index.html` в корне репозитория.
-Опубликовано оно на github pages ([ссылка](https://nsbarsukov.github.io/cv/)).
+
+Опубликовано на github pages ([ссылка](https://nsbarsukov.github.io/cv/)).
 
 ## PDF converter
 В консоле нужно исполнить `npm i`,
