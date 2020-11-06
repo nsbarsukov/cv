@@ -19,6 +19,7 @@ async function converter(): Promise<void> {
     const page = await browser.newPage();
 
     await page.goto('file://' + path.resolve(htmlFilePath), {waitUntil: 'networkidle0'});
+    await page.emulateMediaType('print');
 
     const printPDFOptions: PrintPDFOptions = {
         format: 'A4',
