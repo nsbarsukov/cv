@@ -2,6 +2,7 @@ import * as puppeteer from 'puppeteer';
 import * as path from "path";
 
 import {askHtmlPdfPaths} from "./ask-html-pdf-paths";
+import {PrintPDFOptions} from "./toPDFoptions.model";
 
 converter().catch(err => {
     console.error(err);
@@ -19,7 +20,7 @@ async function converter(): Promise<void> {
 
     await page.goto('file://' + path.resolve(htmlFilePath), {waitUntil: 'networkidle0'});
 
-    await page.pdf({
+    const printPDFOptions: PrintPDFOptions = {
         displayHeaderFooter: false,
         format: 'A4',
         preferCSSPageSize: true,
@@ -32,11 +33,10 @@ async function converter(): Promise<void> {
         path: pdfFilePath,
         scale: 1,
         printBackground: true,
-        /**
-         * Paper ranges to print, e.g., '1-5, 8, 11-13'. Defaults to the empty string, which means print all pages.
-         */
         pageRanges: '1'
-    });
+    };
+
+    await page.pdf(printPDFOptions);
 
     await browser.close();
     process.exit();
