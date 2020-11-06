@@ -21,7 +21,6 @@ async function converter(): Promise<void> {
     await page.goto('file://' + path.resolve(htmlFilePath), {waitUntil: 'networkidle0'});
 
     const printPDFOptions: PrintPDFOptions = {
-        displayHeaderFooter: false,
         format: 'A4',
         preferCSSPageSize: true,
         margin: {
@@ -31,7 +30,6 @@ async function converter(): Promise<void> {
             top: 0
         },
         path: pdfFilePath,
-        scale: 1,
         printBackground: true,
         pageRanges: '1'
     };
