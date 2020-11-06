@@ -1,6 +1,6 @@
 import {createInterface} from 'readline';
 
-const DEFAULT_HTML_PATH = 'cv-template/cv-template.html';
+const DEFAULT_HTML_PATH = 'index.html';
 const DEFAULT_PDF_PATH = 'cvBars.pdf';
 
 export async function askHtmlPdfPaths(): Promise<[string, string]> {

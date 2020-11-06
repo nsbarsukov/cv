@@ -1,5 +1,5 @@
 # Curriculum vitae
-Мое резюме в html формате. Лежит по пути `cv-template/cv-template.html`
+Мое резюме в html формате. Это `index.html` в корне репозитория.
 
 ## PDF converter
 В консоле нужно исполнить `npm i`,
