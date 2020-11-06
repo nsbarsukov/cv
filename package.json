@@ -17,12 +17,12 @@
   },
   "homepage": "https://github.com/nsbarsukov/cv#readme",
   "devDependencies": {
-    "typescript": "3.9.2"
+    "typescript": "3.9.2",
+    "puppeteer": "5.0.0",
+    "ts-node": "8.10.1",
+    "@types/node": "14.0.19"
   },
   "dependencies": {
-    "@types/node": "14.0.19",
-    "less": "^3.11.3",
-    "puppeteer": "5.0.0",
-    "ts-node": "8.10.1"
+    "less": "^3.11.3"
   }
 }
