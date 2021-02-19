@@ -288,9 +288,13 @@ body {
         }
 
         .work-experience {
-            .two-column-table(55%, 45%);
+            .two-column-table(60%, 40%);
             flex-grow: 1;
             margin-bottom: 15px;
+
+            @media @desktop {
+                .two-column-table(55%, 45%);
+            }
 
             .job {
 
@@ -330,14 +334,22 @@ body {
         }
 
         .achievements-table {
-            .two-column-table(30%, 70%);
+            .two-column-table(20%, 80%);
+
+            @media @desktop {
+                .two-column-table(30%, 70%);
+            }
 
             .achievement {
                 .s-text();
 
                 &__title {
-                    .m-text();
+                    .s-text();
                     font-weight: bold;
+
+                    @media @desktop {
+                        .m-text();
+                    }
                 }
 
                 &__list {
