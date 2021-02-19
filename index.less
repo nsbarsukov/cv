@@ -10,6 +10,7 @@
     .a4-page {
         margin: 0;
         height: 298mm;
+        width: 210mm;
         box-shadow: none;
     }
 }
@@ -23,11 +24,15 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    width: 210mm;
+    width: 100%;
     height: auto;
     background-color: #eeeeee;
     margin: 0 auto 0.5cm;
     box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+
+    @media @desktop {
+        width: 210mm;
+    }
 }
 
 .header-row {
