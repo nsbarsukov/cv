@@ -132,12 +132,16 @@ body {
         @sidebar-margin-right: 20px;
 
         &__simple-header {
-            .l-text();
+            .m-text();
             font-weight: bold;
             position: relative;
             color: @secondary-color;
             margin: 20px @sidebar-margin-right 20px 0;
             border-bottom: 1px solid @secondary-color;
+
+            @media @desktop {
+                .l-text();
+            }
 
             &:after {
                 content:'';
@@ -150,10 +154,14 @@ body {
         }
 
         &__filled-header {
-            .l-text();
+            .m-text();
             font-weight: bold;
             background-color: @secondary-color;
             padding: 10px @sidebar-margin-right 10px 0;
+
+            @media @desktop {
+                .l-text();
+            }
         }
 
         &__contacts {
@@ -229,8 +237,12 @@ body {
                 padding-bottom: 10px;
 
                 &__name {
-                    .m-text();
+                    .s-text();
                     color: @text-on-dark-blocks-color;
+
+                    @media @desktop {
+                        .m-text();
+                    }
                 }
 
                 &__icon {
