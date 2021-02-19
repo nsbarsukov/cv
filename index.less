@@ -135,14 +135,18 @@ body {
         background-color: @primary-dark-color;
         text-align: right;
 
-        @sidebar-margin-right: 20px;
+        --sidebar-margin-right: 12px;
+
+        @media @desktop {
+            --sidebar-margin-right: 20px;
+        }
 
         &__simple-header {
             .m-text();
             font-weight: bold;
             position: relative;
             color: @secondary-color;
-            margin: 20px @sidebar-margin-right 20px 0;
+            margin: 20px var(--sidebar-margin-right) 20px 0;
             border-bottom: 1px solid @secondary-color;
 
             @media @desktop {
@@ -163,7 +167,7 @@ body {
             .m-text();
             font-weight: bold;
             background-color: @secondary-color;
-            padding: 10px @sidebar-margin-right 10px 0;
+            padding: 10px var(--sidebar-margin-right) 10px 0;
 
             @media @desktop {
                 .l-text();
@@ -177,7 +181,7 @@ body {
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
-                margin-right: @sidebar-margin-right;
+                margin-right: var(--sidebar-margin-right);
                 margin-bottom: 20px;
 
                 &__name {
@@ -216,7 +220,7 @@ body {
                 &__name {
                     .m-text();
                     font-weight: bold;
-                    margin-right: @sidebar-margin-right;
+                    margin-right: var(--sidebar-margin-right);
                     margin-bottom: 5px;
 
                 }
@@ -224,20 +228,20 @@ body {
                 &__document {
                     .m-text();
                     cursor: pointer;
-                    margin-right: @sidebar-margin-right;
+                    margin-right: var(--sidebar-margin-right);
                     margin-bottom: 5px;
                 }
 
                 &__university {
                     .s-text();
-                    margin-right: @sidebar-margin-right;
+                    margin-right: var(--sidebar-margin-right);
                 }
             }
         }
 
         &__programming-languages {
             flex-grow: 1;
-            margin-right: @sidebar-margin-right;
+            margin-right: var(--sidebar-margin-right);
             margin-top: 10px;
             margin-bottom: 0;
 
