@@ -75,23 +75,29 @@ body {
         width: @main-section-width;
 
         &__name {
-            .xll-text();
+            .xl-text();
             font-weight: bold;
             margin: 5px 0 5px var(--margin-left-from-sidebar);
 
             @media @desktop {
+                .xll-text();
+
                 margin-top: 60px;
             }
         }
 
         &__specialization {
-            .xl-text();
+            .l-text();
             background-color: @primary-dark-color;
             color: @secondary-color;
             margin-left: var(--margin-left-from-sidebar);
             padding: 5px;
             margin-bottom: 10px;
             text-transform: uppercase;
+
+            @media @desktop {
+                .xl-text();
+            }
         }
 
         &__short {
