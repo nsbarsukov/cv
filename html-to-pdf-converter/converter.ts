@@ -1,8 +1,7 @@
-import * as puppeteer from 'puppeteer';
+import { launch, PDFOptions } from 'puppeteer';
 import * as path from "path";
 
 import {askHtmlPdfPaths} from "./ask-html-pdf-paths";
-import {PrintPDFOptions} from "./toPDFoptions.model";
 
 converter().catch(err => {
     console.error(err);
@@ -12,17 +11,17 @@ converter().catch(err => {
 async function converter(): Promise<void> {
     const [htmlFilePath, pdfFilePath] = await askHtmlPdfPaths();
 
-    const browser = await puppeteer.launch({
-        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-web-security', '--font-render-hinting=none'],
-        headless: true
+    const browser = await launch({
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-web-security', '--font-render-hinting=none', `--window-size=1200,900`],
+        headless: true,
     });
     const page = await browser.newPage();
 
     await page.goto('file://' + path.resolve(htmlFilePath), {waitUntil: 'networkidle0'});
     await page.emulateMediaType('print');
 
-    const printPDFOptions: PrintPDFOptions = {
-        format: 'A4',
+    const printPDFOptions: PDFOptions = {
+        format: "a4",
         preferCSSPageSize: true,
         margin: {
             bottom: 0,
